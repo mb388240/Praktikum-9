@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan</title>
+</head>
+<body>
+    <h2>Penjumlahan antara 2 bilangan</h2>
+
+    <form name="form">
+        Angka1
+        <input type=text name="angka1" size=3><br><br>
+        Angka2
+        <input name="angka2" type="text" size="3" /><br>
+        <br>
+        Hasil <input type="text" value="" name="total" size="9">
+    
+    <input type=button name=submit onclick="tambah()" value="+">
+
+    <script>
+        function cek(){
+            if(form.angka1.value == "" || form.angka2.value == ""){
+            alert("data kosong"); //jika angka kosong maka pesan akan tampil
+            exit;
+            }
+            }
+
+            function tambah() {
+            cek(); //panggil function cek
+            a=eval(form.angka1.value); //mengisi variabel a dengan isi dari input name angka1
+            b=eval(form.angka2.value); //mengisi variabel b dengan isi dari input name angka2
+            c=a+b //menjumlahkan kedua variabel
+            form.total.value = c; //memberikan hasil penjumlahan ke input name total
+            }
+    </script>
+</body>
+</html>
